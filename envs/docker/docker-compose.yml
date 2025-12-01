@@ -1,0 +1,71 @@
+version: '3.8'
+
+services:
+  # MongoDB Database
+  mongodb:
+    image: mongo:latest
+    container_name: dashboard-mongodb
+    restart: unless-stopped
+    ports:
+      - "27018:27017"
+    environment:
+      MONGO_INITDB_DATABASE: dashboard_db
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - dashboard-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # API Backend
+  api:
+    build:
+      context: ../..
+      dockerfile: envs/docker/Dockerfile.api
+    container_name: dashboard-api
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+      - MONGO_URI=mongodb://mongodb:27017/dashboard_db
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    networks:
+      - dashboard-network
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3001/', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Dashboard Frontend
+  dashboard:
+    build:
+      context: ../..
+      dockerfile: envs/docker/Dockerfile.dashboard
+      args:
+        - VITE_API_URL=http://localhost:3001/api
+    container_name: dashboard-frontend
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    depends_on:
+      - api
+    networks:
+      - dashboard-network
+
+volumes:
+  mongodb_data:
+    driver: local
+
+networks:
+  dashboard-network:
+    driver: bridge
+
