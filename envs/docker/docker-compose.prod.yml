@@ -2,16 +2,16 @@ services:
   # MongoDB Database
   mongodb:
     image: mongo:latest
-    container_name: dashboard-mongodb
+    container_name: dashboard-mongodb-prod
     restart: unless-stopped
     ports:
-      - "27018:27017"
+      - "27019:27017"
     environment:
       MONGO_INITDB_DATABASE: dashboard_db
     volumes:
-      - mongodb_data:/data/db
+      - mongodb_data_prod:/data/db
     networks:
-      - dashboard-network
+      - dashboard-network-prod
     healthcheck:
       test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
       interval: 10s
@@ -22,24 +22,20 @@ services:
   api:
     build:
       context: ../..
-      dockerfile: envs/docker/Dockerfile.api
-    container_name: dashboard-api
+      dockerfile: envs/docker/Dockerfile.api.prod
+    container_name: dashboard-api-prod
     restart: unless-stopped
     ports:
-      - "3001:3001"
+      - "3002:3001"
     environment:
-      - NODE_ENV=development
+      - NODE_ENV=production
       - PORT=3001
       - MONGO_URI=mongodb://mongodb:27017/dashboard_db
     depends_on:
       mongodb:
         condition: service_healthy
     networks:
-      - dashboard-network
-    volumes:
-      # Montar el código para hot-reload en desarrollo
-      - ../../api:/app
-      - /app/node_modules
+      - dashboard-network-prod
     healthcheck:
       test: ["CMD", "node", "-e", "require('http').get('http://localhost:3001/', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"]
       interval: 30s
@@ -51,29 +47,23 @@ services:
   dashboard:
     build:
       context: ../..
-      dockerfile: envs/docker/Dockerfile.dashboard
+      dockerfile: envs/docker/Dockerfile.dashboard.prod
       args:
-        - VITE_API_URL=http://localhost:3001/api
-    container_name: dashboard-frontend
+        - VITE_API_URL=http://localhost:3002/api
+    container_name: dashboard-frontend-prod
     restart: unless-stopped
     ports:
-      - "5173:5173"
-    environment:
-      - VITE_API_URL=http://localhost:3001/api
+      - "8080:80"
     depends_on:
       - api
     networks:
-      - dashboard-network
-    volumes:
-      # Montar el código para hot-reload en desarrollo
-      - ../../dashboard:/app
-      - /app/node_modules
+      - dashboard-network-prod
 
 volumes:
-  mongodb_data:
+  mongodb_data_prod:
     driver: local
 
 networks:
-  dashboard-network:
+  dashboard-network-prod:
     driver: bridge
 

@@ -76,7 +76,7 @@ const handleSidebarNavigate = (viewId) => {
             rounded
             aria-label="Volver"
             @click="goBack"
-            class="!p-0 !w-10 !h-10 !text-gray-600 hover:!bg-gray-100"
+            class="p-0 w-10 h-10 text-gray-600 hover:bg-gray-100"
           />
           <h1 class="text-xl font-semibold text-gray-800">
             {{ getPageTitle }}

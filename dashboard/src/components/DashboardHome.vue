@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted, watch } from "vue";
+import { ref, computed, onMounted } from "vue";
 import Chart from "primevue/chart";
 import Select from "primevue/select";
 import MultiSelect from "primevue/multiselect";

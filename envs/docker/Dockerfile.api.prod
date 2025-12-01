@@ -1,4 +1,4 @@
-# Dockerfile para la API (Modo Desarrollo)
+# Dockerfile para la API (Modo Producción)
 FROM node:22-alpine
 
 # Configurar pnpm
@@ -12,8 +12,8 @@ WORKDIR /app
 # Copiar archivos de configuración de dependencias
 COPY api/package.json api/pnpm-lock.yaml ./
 
-# Instalar dependencias
-RUN pnpm install --frozen-lockfile
+# Instalar solo dependencias de producción
+RUN pnpm install --frozen-lockfile --prod
 
 # Copiar el resto del código de la API
 COPY api/ ./
@@ -21,6 +21,6 @@ COPY api/ ./
 # Exponer el puerto
 EXPOSE 3001
 
-# Comando para modo desarrollo
-CMD ["pnpm", "dev"]
+# Comando para modo producción
+CMD ["pnpm", "start"]
 
