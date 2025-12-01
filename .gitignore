@@ -2,3 +2,4 @@ api/node_modules
 dashboard/node_modules
 .env
 dashboard/dist
+node_modules
