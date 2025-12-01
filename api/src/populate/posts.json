@@ -1,0 +1,252 @@
+[
+  {
+    "id": 1,
+    "title": "Getting Started with Vue 3",
+    "content": "<p>Vue 3 introduces the Composition API, which is a game changer...</p>",
+    "tags": ["vue", "javascript", "frontend"],
+    "categories": ["Technology", "Development"],
+    "publishedAt": "2025-01-15T10:00:00Z",
+    "userId": 1,
+    "status": "Published"
+  },
+  {
+    "id": 2,
+    "title": "The Future of CSS",
+    "content": "<p>CSS is evolving rapidly with new features like container queries...</p>",
+    "tags": ["css", "design", "web"],
+    "categories": ["Design", "Technology"],
+    "publishedAt": "2025-02-20T14:30:00Z",
+    "userId": 2,
+    "status": "Draft"
+  },
+  {
+    "id": 3,
+    "title": "Understanding PrimeVue Components",
+    "content": "<p>PrimeVue offers a rich set of UI components for Vue applications...</p>",
+    "tags": ["primevue", "ui", "vue"],
+    "categories": ["Development"],
+    "publishedAt": "2025-03-05T09:15:00Z",
+    "userId": 3,
+    "status": "Published"
+  },
+  {
+    "id": 4,
+    "title": "Mastering Tailwind CSS",
+    "content": "<p>Tailwind CSS is a utility-first CSS framework that speeds up development...</p>",
+    "tags": ["tailwindcss", "css", "frontend"],
+    "categories": ["Development", "Design"],
+    "publishedAt": "2025-03-10T11:45:00Z",
+    "userId": 1,
+    "status": "Published"
+  },
+  {
+    "id": 5,
+    "title": "JavaScript ES2025 Features",
+    "content": "<p>Explore the latest features in JavaScript ES2025...</p>",
+    "tags": ["javascript", "es6", "coding"],
+    "categories": ["Technology"],
+    "publishedAt": "2025-04-01T08:00:00Z",
+    "userId": 4,
+    "status": "Published"
+  },
+  {
+    "id": 6,
+    "title": "Building Scalable Web Apps",
+    "content": "<p>Scalability is crucial for modern web applications. Here's how...</p>",
+    "tags": ["architecture", "web", "scaling"],
+    "categories": ["Technology", "Development"],
+    "publishedAt": "2025-04-15T16:20:00Z",
+    "userId": 5,
+    "status": "Draft"
+  },
+  {
+    "id": 7,
+    "title": "UX Design Principles",
+    "content": "<p>Good UX design is invisible. Let's discuss the core principles...</p>",
+    "tags": ["ux", "design", "principles"],
+    "categories": ["Design"],
+    "publishedAt": "2025-05-05T13:10:00Z",
+    "userId": 2,
+    "status": "Published"
+  },
+  {
+    "id": 8,
+    "title": "Introduction to Vite",
+    "content": "<p>Vite is the next generation frontend tooling...</p>",
+    "tags": ["vite", "tooling", "frontend"],
+    "categories": ["Development"],
+    "publishedAt": "2025-05-20T10:00:00Z",
+    "userId": 6,
+    "status": "Published"
+  },
+  {
+    "id": 9,
+    "title": "State Management with Pinia",
+    "content": "<p>Pinia is the intuitive, type-safe store for Vue...</p>",
+    "tags": ["vue", "pinia", "state-management"],
+    "categories": ["Development"],
+    "publishedAt": "2025-06-01T15:30:00Z",
+    "userId": 3,
+    "status": "Draft"
+  },
+  {
+    "id": 10,
+    "title": "Remote Work Best Practices",
+    "content": "<p>How to stay productive while working from home...</p>",
+    "tags": ["remote-work", "productivity", "lifestyle"],
+    "categories": ["Lifestyle"],
+    "publishedAt": "2025-06-15T09:00:00Z",
+    "userId": 7,
+    "status": "Published"
+  },
+  {
+    "id": 11,
+    "title": "Mobile-First Design Strategy",
+    "content": "<p>Designing for mobile first ensures a better experience on all devices...</p>",
+    "tags": ["mobile", "design", "strategy"],
+    "categories": ["Design", "Technology"],
+    "publishedAt": "2025-07-01T11:00:00Z",
+    "userId": 8,
+    "status": "Published"
+  },
+  {
+    "id": 12,
+    "title": "Cybersecurity Trends 2025",
+    "content": "<p>Stay ahead of the curve with these cybersecurity trends...</p>",
+    "tags": ["security", "tech", "trends"],
+    "categories": ["Technology"],
+    "publishedAt": "2025-07-10T14:00:00Z",
+    "userId": 9,
+    "status": "Published"
+  },
+  {
+    "id": 13,
+    "title": "The Art of Minimalist Design",
+    "content": "<p>Less is more. How to achieve a clean, minimalist look...</p>",
+    "tags": ["design", "minimalism", "art"],
+    "categories": ["Design"],
+    "publishedAt": "2025-07-20T10:30:00Z",
+    "userId": 10,
+    "status": "Published"
+  },
+  {
+    "id": 14,
+    "title": "Optimizing Web Performance",
+    "content": "<p>Speed matters. Learn how to optimize your website's performance...</p>",
+    "tags": ["performance", "web", "optimization"],
+    "categories": ["Development", "Technology"],
+    "publishedAt": "2025-08-01T09:45:00Z",
+    "userId": 1,
+    "status": "Draft"
+  },
+  {
+    "id": 15,
+    "title": "Accessibility on the Web (a11y)",
+    "content": "<p>Making the web accessible to everyone is a responsibility...</p>",
+    "tags": ["a11y", "accessibility", "web"],
+    "categories": ["Development"],
+    "publishedAt": "2025-08-15T12:00:00Z",
+    "userId": 11,
+    "status": "Published"
+  },
+  {
+    "id": 16,
+    "title": "Project Management for Developers",
+    "content": "<p>Essential project management skills every developer should know...</p>",
+    "tags": ["management", "soft-skills", "dev"],
+    "categories": ["Business", "Development"],
+    "publishedAt": "2025-08-25T15:15:00Z",
+    "userId": 12,
+    "status": "Published"
+  },
+  {
+    "id": 17,
+    "title": "Understanding Cloud Computing",
+    "content": "<p>A beginner's guide to cloud services like AWS, Azure, and GCP...</p>",
+    "tags": ["cloud", "aws", "azure"],
+    "categories": ["Technology"],
+    "publishedAt": "2025-09-05T08:30:00Z",
+    "userId": 13,
+    "status": "Published"
+  },
+  {
+    "id": 18,
+    "title": "The Rise of AI in Coding",
+    "content": "<p>How AI tools are changing the way we write code...</p>",
+    "tags": ["ai", "coding", "future"],
+    "categories": ["Technology", "Future"],
+    "publishedAt": "2025-09-15T14:45:00Z",
+    "userId": 4,
+    "status": "Published"
+  },
+  {
+    "id": 19,
+    "title": "Healthy Habits for Programmers",
+    "content": "<p>Coding is sedentary. Here are some tips to stay healthy...</p>",
+    "tags": ["health", "lifestyle", "habits"],
+    "categories": ["Lifestyle"],
+    "publishedAt": "2025-09-25T17:00:00Z",
+    "userId": 14,
+    "status": "Published"
+  },
+  {
+    "id": 20,
+    "title": "Learning a New Language: Rust",
+    "content": "<p>Why Rust is gaining popularity and how to get started...</p>",
+    "tags": ["rust", "programming", "learning"],
+    "categories": ["Technology", "Development"],
+    "publishedAt": "2025-10-01T10:10:00Z",
+    "userId": 15,
+    "status": "Draft"
+  },
+  {
+    "id": 21,
+    "title": "Effective Code Reviews",
+    "content": "<p>How to give and receive constructive feedback on code...</p>",
+    "tags": ["code-review", "teamwork", "quality"],
+    "categories": ["Development", "Business"],
+    "publishedAt": "2025-10-10T13:20:00Z",
+    "userId": 16,
+    "status": "Published"
+  },
+  {
+    "id": 22,
+    "title": "Understanding API Design",
+    "content": "<p>REST vs GraphQL vs gRPC. Which one should you choose?</p>",
+    "tags": ["api", "backend", "design"],
+    "categories": ["Development"],
+    "publishedAt": "2025-10-20T09:50:00Z",
+    "userId": 17,
+    "status": "Published"
+  },
+  {
+    "id": 23,
+    "title": "The Power of Networking",
+    "content": "<p>Why networking is important for your career growth...</p>",
+    "tags": ["career", "networking", "growth"],
+    "categories": ["Business", "Lifestyle"],
+    "publishedAt": "2025-11-01T11:30:00Z",
+    "userId": 18,
+    "status": "Published"
+  },
+  {
+    "id": 24,
+    "title": "Introduction to Docker",
+    "content": "<p>Containerization with Docker explained simply...</p>",
+    "tags": ["docker", "devops", "containers"],
+    "categories": ["Technology", "Development"],
+    "publishedAt": "2025-11-10T15:00:00Z",
+    "userId": 19,
+    "status": "Published"
+  },
+  {
+    "id": 25,
+    "title": "Sustainable Web Design",
+    "content": "<p>Reducing the carbon footprint of your websites...</p>",
+    "tags": ["sustainability", "web", "green"],
+    "categories": ["Design", "Technology"],
+    "publishedAt": "2025-11-20T10:45:00Z",
+    "userId": 20,
+    "status": "Published"
+  }
+]

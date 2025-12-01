@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@import "tailwindcss-primeui";
+
+/* Global hover effect for PrimeVue DataTables */
+.p-datatable-tbody > tr {
+    transition: background-color 0.2s;
+}
+
+.p-datatable-tbody > tr:hover {
+    background-color: var(--p-surface-100) !important; /* Use PrimeVue surface color or Tailwind gray-100 */
+    cursor: pointer;
+}

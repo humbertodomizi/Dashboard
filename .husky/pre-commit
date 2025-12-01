@@ -1,0 +1,13 @@
+# Dashboard Checks
+echo "Running Prettier on Dashboard..."
+cd dashboard && pnpm format
+echo "Building Dashboard..."
+pnpm build
+cd ..
+
+# API Checks
+echo "Running Prettier on API..."
+cd api && pnpm format
+echo "Checking API Syntax..."
+node --check server.js
+cd ..
