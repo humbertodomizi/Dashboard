@@ -1,11 +1,11 @@
-const Post = require('../models/Post');
+const Post = require("../models/Post");
 
 const getAllPosts = async () => {
-  return await Post.find().populate('user', 'firstName lastName email');
+  return await Post.find().populate("user", "firstName lastName email");
 };
 
 const getPostById = async (id) => {
-  return await Post.findById(id).populate('user', 'firstName lastName email');
+  return await Post.findById(id).populate("user", "firstName lastName email");
 };
 
 const createPost = async (postData) => {
@@ -25,5 +25,5 @@ module.exports = {
   getPostById,
   createPost,
   updatePost,
-  deletePost
+  deletePost,
 };

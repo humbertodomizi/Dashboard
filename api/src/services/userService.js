@@ -1,4 +1,4 @@
-const User = require('../models/User');
+const User = require("../models/User");
 
 const getAllUsers = async () => {
   return await User.find().sort({ createdAt: -1 });
@@ -25,5 +25,5 @@ module.exports = {
   getUserById,
   createUser,
   updateUser,
-  deleteUser
+  deleteUser,
 };

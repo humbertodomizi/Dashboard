@@ -98,7 +98,7 @@ const schema = computed(() => {
               patterns.number.test(value) &&
               patterns.special.test(value)
             );
-          }
+          },
         ),
       confirmPassword: yup
         .string()
@@ -108,7 +108,7 @@ const schema = computed(() => {
           "Confirmar contraseña es obligatorio",
           function (value) {
             return !this.parent.password || !!value;
-          }
+          },
         ),
     });
   } else {
